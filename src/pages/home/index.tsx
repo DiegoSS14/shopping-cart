@@ -3,6 +3,7 @@ import api from '../../services/api'
 
 import { CardProduct } from '../../components/cardProduct'
 import { CartContext } from '../../contexts/CartContext'
+import toast from 'react-hot-toast'
 
 export interface ProductsProps {
     id: string
@@ -18,6 +19,12 @@ export function Home() {
 
     function handleClickCart(product: ProductsProps) {
         addItemCart(product)
+        toast.success("Produto adicionado ao carrinho", {
+            style: {
+                backgroundColor: "#121212",
+                color: "#fff"
+            }
+        })
     }
 
     useEffect(() => {
