@@ -9,7 +9,7 @@ interface ContextData {
     total: number | undefined;
 }
 
-interface CartProps {
+export interface CartProps {
     id: string;
     title: string;
     description: string;

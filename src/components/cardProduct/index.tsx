@@ -1,13 +1,14 @@
 import { BsCartPlus } from 'react-icons/bs'
+import { Link } from 'react-router'
 
 
-interface ProductsProps {
+export interface ProductsProps {
     id: string
     title: string
     description: string
     price: number
     cover: string
-    clickEvent: () => void 
+    clickEvent: () => void
 }
 
 export function CardProduct(product: ProductsProps) {
@@ -17,7 +18,7 @@ export function CardProduct(product: ProductsProps) {
             id={product.id}
             className='w-full flex flex-col justify-between border-1 p-5 border-zinc-200 bg-white rounded-lg transform duration-200 hover:scale-101 hover:drop-shadow-xl cursor-pointer'
         >
-            <div>
+            <Link to={`/products/${product.id}`}>
                 <img
                     className="w-full max-h-70 object-cover rounded-lg mb-2"
                     src={product.cover}
@@ -27,7 +28,7 @@ export function CardProduct(product: ProductsProps) {
                 <strong className='font-bold text-lg'>
                     {product.title}
                 </strong>
-            </div>
+            </Link>
 
             <div className='flex gap-3 items-center justify-between mt-4'>
                 <strong className='text-xl'>

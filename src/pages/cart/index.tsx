@@ -18,11 +18,13 @@ export function Cart() {
                                 key={item.id}
                                 className="w-full flex items-center justify-between p-5 gap-6 border-1 border-zinc-200 bg-white rounded-lg transform duration-200 hover:scale-101 hover:drop-shadow-x1"
                             >
-                                <img
-                                    className="w-20 lg:w-30"
-                                    src={item.cover}
-                                    alt={item.description}
-                                />
+                                <Link to={`/products/${item.id}`}>
+                                    <img
+                                        className="w-20 lg:w-30"
+                                        src={item.cover}
+                                        alt={item.description}
+                                    />
+                                </Link>
 
                                 <strong className="text-lg">
                                     Preço: {item.price.toLocaleString('pt-BR', {
