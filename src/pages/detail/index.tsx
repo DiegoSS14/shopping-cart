@@ -6,7 +6,7 @@ import { BsCartPlus } from 'react-icons/bs'
 import toast from 'react-hot-toast'
 import { CartContext } from '../../contexts/CartContext'
 
-export function Product() {
+export function Detail() {
     const { id } = useParams()
     const [product, setProduct] = useState<ProductsProps>()
     const { addItemCart } = useContext(CartContext)
@@ -33,12 +33,12 @@ export function Product() {
     }
 
     return (
-        <div className='w-full px-5 max-w-7xl flex flex-col justify-center items-top mt-8 m-auto gap-2 sm:flex-row sm:gap-10'>
+        <main className='w-full px-5 max-w-7xl flex flex-col justify-center items-top mt-8 m-auto gap-2 lg:flex-row lg:gap-10'>
             <img
-                className='max-full sm:max-w-1/2 outline-1 outline-gray-300 rounded-2xl cursor-pointer'
+                className='flex w-full lg:max-w-80 outline-1 outline-gray-300 rounded-2xl cursor-pointer'
                 src={product?.cover}
             />
-            <div className='w-full flex flex-col gap-4 m-4'>
+            <div className='w-full flex flex-col gap-4 mt-4'>
                 <h1 className='font-semibold text-2xl'>1 {product?.title}</h1>
                 <span>{product?.description}</span>
                 <span
@@ -56,6 +56,6 @@ export function Product() {
                     <BsCartPlus size={20} color='#fff' />
                 </button>
             </div>
-        </div>
+        </main>
     )
 }
