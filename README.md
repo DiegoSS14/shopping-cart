@@ -1,69 +1,27 @@
-# React + TypeScript + Vite
+# 🛒 Shopping-cart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto de estudo desenvolvido em **React com TypeScript**, baseado em um curso, no qual explorei conceitos fundamentais e também pratiquei recursos adicionais como **Context API**, **react-router**, **TailwindCSS** e **react-hot-toast**.
 
-Currently, two official plugins are available:
+## 📌 Sobre o Projeto
+O projeto simula uma pequena aplicação de e-commerce com as seguintes páginas:
+- **Home:** listagem de produtos disponíveis.
+- **Detalhes do Produto:** exibe informações detalhadas de cada item.
+- **Carrinho:** permite visualizar e gerenciar os produtos adicionados.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Além disso:
+- Criei componentes reutilizáveis para estruturar a aplicação.
+- Explorei recursos do **TailwindCSS** para aplicar estilos e efeitos visuais interessantes.
+- Implementei **toasts com react-hot-toast** para melhorar a experiência do usuário em interações como adicionar ao carrinho.
 
-## Expanding the ESLint configuration
+## 🚀 Tecnologias Utilizadas
+- [React](https://react.dev/) com [TypeScript](https://www.typescriptlang.org/)
+- [React Router](https://reactrouter.com/) para navegação
+- [TailwindCSS](https://tailwindcss.com/) para estilização
+- [Context API](https://react.dev/reference/react/useContext) para gerenciamento de estado global
+- [React Hot Toast](https://react-hot-toast.com/) para notificações
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🎯 Objetivo
+Este projeto foi criado apenas para fins de estudo, com o intuito de praticar **React + TypeScript**, gerenciamento de estado global e estilização com Tailwind, além de entender melhor a integração de bibliotecas úteis no desenvolvimento front-end.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+✍️ Desenvolvido como parte dos meus estudos em React.
